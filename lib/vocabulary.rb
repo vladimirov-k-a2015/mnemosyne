@@ -3,7 +3,7 @@ class Vocabulary
 	def pick_random_line
 	  chosen_line = nil
 	  File.foreach("#{Rails.root}/lib/word_rus.txt").each_with_index do |line, number|
-	    chosen_line = line if rand < 1.0/(number+1)
+	    chosen_line = line.strip if rand < 1.0/(number+1)
 	  end
 	  return chosen_line
 	  puts chosen_line
