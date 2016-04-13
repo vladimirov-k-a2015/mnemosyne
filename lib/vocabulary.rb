@@ -2,7 +2,7 @@ class Vocabulary
 
 	def pick_random_line
 	  chosen_line = nil
-	  File.foreach("/home/anthony/rails_projects/mnemosyne/lib/word_rus.txt").each_with_index do |line, number|
+	  File.foreach("#{Rails.root}/lib/word_rus.txt").each_with_index do |line, number|
 	    chosen_line = line if rand < 1.0/(number+1)
 	  end
 	  return chosen_line
