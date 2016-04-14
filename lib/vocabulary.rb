@@ -8,11 +8,7 @@ class Vocabulary
 	  return chosen_line
 	  puts chosen_line
 	end
-	# -Есть вариант выбора случайных слов, но тогда в памяти будет массив с 14 000 элементов----------
-	# def pick_random_line
-	#   File.readlines("word_rus.txt").sample
-	# end
-	# -----------------------
+
 
 	def get_random_words x
 	   get_random_words = (0..(x.to_i-1)).map{ pick_random_line }
@@ -21,3 +17,12 @@ class Vocabulary
 end
 
 
+
+
+
+
+# -Есть вариант выбора случайных слов, но тогда в памяти будет массив с 14 000 элементов----------
+	# def pick_random_line
+	#   File.readlines("word_rus.txt").sample
+	# end
+	# -----------------------
