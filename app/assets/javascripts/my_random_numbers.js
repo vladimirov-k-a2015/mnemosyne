@@ -1,6 +1,8 @@
 $(document).ready(function() {
 
 	var peremennaya;
+	var i = 0; 
+
 
 	$('.create-random-array').click(function() {
 		var n = $('#random-words-number').val();
@@ -16,7 +18,15 @@ $(document).ready(function() {
 	});
 
 
-	$('.anton').click(function() {
-		$(this).text(peremennaya); 
+	$('#show-next-word').click(function() {
+		if ( i < peremennaya.length ) 
+			{
+				$("#words-list").append("<li>" + peremennaya[i] + "</li>");
+				i += 1;
+			}
+			else
+		        { alert( "Показаны все слова" ); }
 	});
 });
+
+
