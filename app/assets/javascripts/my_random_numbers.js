@@ -1,7 +1,11 @@
 $(document).ready(function() {
 
-	var peremennaya;
+	var randomWordsArray;
 	var i = 0; 
+	
+    function getRandomInt(itemsArray){
+        return Math.floor(Math.random() * itemsArray.length);
+    }
 
 
 	$('.create-random-array').click(function() {
@@ -12,21 +16,43 @@ $(document).ready(function() {
 			success: function(data){ 
 				console.log(data); 
 				$('#random-numbers-list').text(data);
-				peremennaya = data;
+				randomWordsArray = data;
 			}
 		});		
 	});
 
 
 	$('#show-next-word').click(function() {
-		if ( i < peremennaya.length ) 
+		if ( i < randomWordsArray.length ) 
 			{
-				$("#words-list").append("<li>" + peremennaya[i] + "</li>");
+				$("#words-list").append("<li>" + randomWordsArray[i] + "</li>");
 				i += 1;
 			}
 			else
 		        { alert( "Показаны все слова" ); }
 	});
+
+
+	$('#show-random-number').click(function() {
+		i = getRandomInt(randomWordsArray);
+		$('#random-num').text(i);
+		console.log(i); 
+	});
+
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
