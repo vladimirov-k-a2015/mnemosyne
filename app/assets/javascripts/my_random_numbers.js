@@ -2,6 +2,7 @@ $(document).ready(function() {
 
 	var randomWordsArray;
 	var i = 0; 
+	var randomNum; 
 	
     function getRandomInt(itemsArray){
         return Math.floor(Math.random() * itemsArray.length);
@@ -29,14 +30,31 @@ $(document).ready(function() {
 				i += 1;
 			}
 			else
-		        { alert( "Показаны все слова" ); }
+		        { alert( "Показаны все слова" );
+		    	  i = 0;
+		    	  $("#words-list").text("");
+		         }
+	});
+
+
+	$('#show-one-word').click(function() {
+		if ( i < randomWordsArray.length ) 
+			{
+				$("#one-word").text(randomWordsArray[i]);
+				i += 1;
+			}
+			else
+		        { alert( "Показаны все слова." );
+		    	  i = 0;
+		    	  $("#one-word").text("");
+		         }
 	});
 
 
 	$('#show-random-number').click(function() {
-		i = getRandomInt(randomWordsArray);
-		$('#random-num').text(i);
-		console.log(i); 
+		randomNum = getRandomInt(randomWordsArray);
+		$('#random-num').text(randomNum + 1);
+		console.log(randomNum); 
 	});
 
 });
