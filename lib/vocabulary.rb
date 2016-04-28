@@ -9,7 +9,6 @@ class Vocabulary
       puts chosen_line
     end
 
-
     def get_random_words x
         validator = Validator.new
         return "HUI" unless validator.validate(x)

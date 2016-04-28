@@ -21,7 +21,7 @@ $(document).ready(function() {
             type: "GET",
             success: function(data){
                 console.log(data);
-                $("#random-numbers-list").text(data);
+                $("#random-numbers-list").text(data.join(", "));
                 randomWordsArray = data;
             }
         });
