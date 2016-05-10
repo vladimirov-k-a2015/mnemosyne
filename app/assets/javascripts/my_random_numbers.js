@@ -36,6 +36,7 @@ $(document).ready(function() {
         j = 0;
         $("#random-num").text("");
         randomWordsArray = null;
+        $("#random-words-number").val("");
     });
 
     $("#list-hide-show").click(function(){
