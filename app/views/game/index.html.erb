@@ -3,22 +3,34 @@
     <p>Скрипт выведет на экран заданное количество случайных слов</p>
 
     <form>
-        <input type="text" id="random-words-number" autocomplete="off">
-        <button class="create-random-array" type="submit">  ЖМИ! </button>
+        <input type="text" id="random-words-number" autocomplete="off" value="">
+        <button class="create-random-array" type="submit"> ЖМИ! </button>
+        <button id="reset-all"> Сбросить </button>
     </form>
 
+
+    <div>
+        <button id="list-hide-show">Скрыть/показать список слов</button>
         <p id="random-numbers-list"></p>
+    </div>
 
     <div>
         <button id="show-next-word"> Слова в столбик </button>
+        <button id="reset-list"> Сбросить </button>
         <ul id="words-list"></ul>
     </div>
 
-    <button id="show-one-word"> Слова по одному </button>
-    <p id="one-word"></p>
+    <div>
+        <button id="show-one-word"> Слова по одному </button>
+        <button id="reset-one-word"> Сбросить </button>
+        <p id="one-word"></p>
+    </div>
 
-    <button id="show-random-number"> Генератор случайных чисел </button>
-    <h3 id="random-num"></h3>
+    <div>
+        <button id="show-random-number"> Генератор случайных чисел </button>
+        <button id="reset-random-number"> Сбросить </button>
+        <p id="random-num"></p>
+    </div>
 
 </div>
 

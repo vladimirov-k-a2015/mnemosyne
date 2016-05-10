@@ -18,10 +18,6 @@ textarea {
   resize: vertical;
 }
 
-.center {
-  text-align: center;
-}
-
 .center h1 {
   margin-bottom: 10px;
 }
@@ -101,4 +97,8 @@ footer ul {
 footer ul li {
   float: left;
   margin-left: 10px;
+}
+
+#random-numbers-list, #words-list, #random-num, #one-word {
+  background-color: #fff;
 }
